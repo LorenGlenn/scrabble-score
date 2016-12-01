@@ -5,7 +5,7 @@ using Nancy.Owin;
 using Nancy;
 using Nancy.ViewEngines.Razor;
 
-namespace Palindrome
+namespace Scrabble
 {
   public class Startup
   {
