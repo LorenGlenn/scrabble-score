@@ -10,6 +10,11 @@ namespace Scrabble
     public HomeModule()
     {
       Get["/"]=_=> View["index.cshtml"];
+      Post["/submit"] = _ =>
+      {
+        Game newGame = new Game(Request.Form["input"]);
+        return View["index.cshtml", newGame.GetStringVal()];
+      };
     }
   }
 }
